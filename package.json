@@ -80,7 +80,7 @@
     "vue-template-compiler": "^2.5.2",
     "vuex": "^3.0.1",
     "webpack": "^3.12.0",
-    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-server": "^2.11.2",
     "webpack-merge": "^4.1.3",
     "xhr-eval-chunk-webpack-plugin": "^0.0.4"
