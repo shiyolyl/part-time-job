@@ -1,0 +1,33 @@
+@theme-color:#54b500;
+/* 清除浮动 */
+.clearfix:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear:both;
+	visibility: hidden;
+}
+a{
+	text-decoration:none;
+	cursor: pointer;
+}
+.applyBtn{
+	width:150px;
+	height:42px;
+	background:@theme-color;
+	border-radius:21px;
+	font-size:18px;
+	color:#fff;
+	line-height:42px;
+	text-align:center;
+	cursor: pointer;
+}
+.el-button--primary{
+	background-color:@theme-color;
+	border-color:@theme-color;
+}
+.el-button--primary:focus, .el-button--primary:hover{
+	background-color:@theme-color;
+	border-color:@theme-color;
+}
+
