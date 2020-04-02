@@ -5,7 +5,7 @@
     </div>
     <div class="login_info">
       <div class="logo_img">
-          <img src="../../../../static/img/logo.png" alt="">
+          <img src="../../../../static/img/logo2.png" alt="">
       </div>
       <div class="input_phone">
           <el-input placeholder="请输入常用手机号" v-model="mobile" class="input-with-select">

@@ -67,11 +67,11 @@
                 </div>
                 <div class="advertising">
                     <div class="advertising_item" v-for="item in advertising">
-                        <a :href="item.link_url" :style="'background:url('+item.thumb+') no-repeat;background-size:cover'"></a>
+                        <a :style="'background:url('+item.thumb+') no-repeat;background-size:cover'"></a>
                     </div>
                 </div>
                 <div class="qrcode">
-                    <img src="../../../../static/img/qrcode.png" alt="">
+                    <img src="../../../../static/img/qrcode2.png" alt="">
                     <div class="qrcode_text">
                         <div>手机微信扫一扫</div>
                         <div>随时随地找工作</div>

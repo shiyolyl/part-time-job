@@ -45,7 +45,7 @@
                     </div>
                     
                 </el-tab-pane>
-                <el-tab-pane :label="'我的投递'+'\n'+''" name="myjob">
+                <el-tab-pane :label="'我的投递'+'\n'+''" name="myjob" style="padding-bottom:200px;">
                     <div class="nodata" v-if="recentViewJobData.length==0">
                         <div class="nodata_img">
                             <img src="../../../../static/img/nojob.png" alt="">
@@ -67,6 +67,7 @@
                         </div>
                     </div>
                     <el-pagination
+                        v-if="total>0"
                         background
                         layout="prev, pager, next"
                         :total="total"
@@ -99,7 +100,7 @@
                 page:1,
                 per_page:5,
                 current_page:this.page,
-                total:5,
+                total:0,
             }
         },
         created(){
@@ -200,6 +201,7 @@
     background-color:#fff;
     margin-top:5px;
     padding-top:60px;
+    height:100%;
     .tab_block{
         margin-left:65px;
         position:relative;

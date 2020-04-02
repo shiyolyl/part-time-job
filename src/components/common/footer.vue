@@ -3,10 +3,10 @@
         <div class="footer_content clearfix">
             <div class="myInfo">
                 <div class="contact">联系我们</div>
-                <div class="place">地址：天津市武清区京滨工业园京滨睿城10号楼2147室</div>
+                <div class="place">地址：天津市武清区京滨工业园京滨睿城10号楼2149室</div>
             </div>
             <div class="qrCode">
-                <img src="../../../static/img/qrcode.png" alt="">
+                <img src="../../../static/img/qrcode2.png" alt="">
                 <div class="qrcode_text">手机扫一扫，轻松找工作</div>
             </div>
         </div>

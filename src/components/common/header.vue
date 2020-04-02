@@ -2,7 +2,7 @@
     <div class="header_wrap">
         <div class="header_content">
             <div class="logo_img">
-                <img src="../../../static/img/logo.png" alt=""@click="goIndex">
+                <img src="../../../static/img/logo2.png" alt=""@click="goIndex">
             </div>
             <div class="search">
                 <el-input v-model="searchValue" placeholder="请输入职位 / 公司名 进行搜索" @input="handleChange" @keyup.native.enter="handleSearch"></el-input>
