@@ -1,5 +1,13 @@
 <template>
     <div class="index_wrap">
+        <Button>
+            <!-- <Select></Select>
+            哈哈哈哈 -->
+            <template v-slot:default="slotProps">
+            <!-- <template #default="slotProps">  -->  <!-- 缩写： #插槽名称 -->
+                {{slotProps.otherInfo.text}}
+            </template>
+        </Button>
         <div class="carousel">
             <el-carousel trigger="click" height="150px">
                 <el-carousel-item v-for="item in carouselData" :key="item.p_id">
@@ -116,6 +124,9 @@ export default{
         this.keywords=this.$store.state.keywords;
         this.getJobList();
         
+
+        this.testAxios();
+        
             
     },
     mounted(){
@@ -129,6 +140,22 @@ export default{
         eventBus.$off("handle-search");
     },
     methods:{
+        testAxios(){
+            var instance = this.$axios.create({
+                baseURL: 'https://zhongxiangwy.cn/api',
+                timeout: 3000,
+                // headers: {'X-Custom-Header': 'foobar'}
+            });
+            instance.get('/product/product_type')
+            .then((res)=>{
+                if(res.data.code==1001){
+                    this.jobTypeArr=res.data.data;
+                    this.activeJobType=res.data.data[0].id.toString();
+                }
+            }).catch((err) => {
+                console.log(err)
+            })
+        },
         handleClickTab_jobType(tab, event) {
             this.page=1;
             this.getJobList();

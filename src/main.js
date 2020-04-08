@@ -18,6 +18,17 @@ Vue.use(global);
 import axios from './http';
 Vue.prototype.$axios = axios;
 
+//自定义的全局弹框组件 已移进插件里面
+// import message from './components/common/message/message';
+// Vue.prototype.$myMessage = message;
+
+//自定义插件：
+import myPlugin from './util/plugin';
+Vue.use(myPlugin);
+
+
+
+
 Vue.config.productionTip = false
 
 import App from './App';

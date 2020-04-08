@@ -19,6 +19,7 @@
                 <span class="phone">{{user_name}}</span>
             </div>
             
+            
         </div>
         
     </div>
@@ -33,13 +34,28 @@ export default{
             currentPath:'',
             token:'',
             user_phone:sessionStorage.user_phone,
-            user_name:sessionStorage.user_name
+            user_name:sessionStorage.user_name,
             
         }
     },
     created(){
         this.currentPath = this.$route.path;
         this.token=sessionStorage.token?sessionStorage.token:'';
+
+        //获取当前vue实例的自定义属性
+        console.log(this.$options.customOption);
+        //获取父实例
+        console.log(this.$parent)
+        this.$parent.mymethod() //执行父组件里的方法
+
+        //获取当前组件树的根vue实例
+        console.log(this.$root)
+    },
+    mounted(){
+        this.$myMessage({
+            text:'请先登录系统',
+            title:'提示'
+        });
     },
     watch: {
         '$route':{
@@ -56,6 +72,8 @@ export default{
         }
         
     },
+    //vue实例的自定义属性
+    customOption:'我是自定义属性值',
     methods:{
         handleChange(value){
             this.$store.commit('changeKeyWords',value);
